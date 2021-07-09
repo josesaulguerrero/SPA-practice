@@ -1,5 +1,5 @@
 export function SearchCard(data) {
-   let date = new Date(data.date).toLocaleString();
+   let date = new Date(data._embedded.self[0].date).toLocaleString();
    const notFoundImage = "https://bitsofco.de/content/images/2018/12/broken-1.png";
    return `
       <article class="card fade-in" >
