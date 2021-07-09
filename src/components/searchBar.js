@@ -8,6 +8,7 @@ export function SearchBar() {
    $input.placeholder = 'search something...';
    const $submitButton = document.createElement('button');
    $submitButton.innerText = "search";
+   $submitButton.type = "button";
    $submitButton.classList.add('search-button')
    $form.appendChild($input);
    $form.appendChild($submitButton);
