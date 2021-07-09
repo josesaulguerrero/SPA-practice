@@ -1,6 +1,6 @@
-// import './assets/styles/styles.css'
-import { App } from "./App.js";
-import api from "./helpers/wp_api.js";
+import '@styles/styles.css'
+import { App } from "@src/App.js";
+// import api from "./helpers/wp_api.js";
 
 document.addEventListener('DOMContentLoaded', App)
 window.addEventListener('hashchange', () => {

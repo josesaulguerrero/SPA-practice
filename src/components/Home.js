@@ -1,6 +1,6 @@
-import { GetData } from "../helpers/get_data.js";
-import api from "../helpers/wp_api.js";
-import { PostCard } from "./postCard.js";
+import { GetData } from "@helpers/get_data";
+import api from "@helpers/wp_api";
+import { PostCard } from "@components/postCard";
 
 
 export async function Home() {

@@ -1,8 +1,8 @@
-import { Post } from '../templates/post.js';
-import { ErrorPost } from '../templates/errorPost.js';
-import { Home } from '../components/Home.js';
-import { SearchView } from '../components/searchView.js';
-import { About } from '../components/about.js';
+import { Post } from '@templates/post';
+import { ErrorPost } from '@templates/errorPost';
+import { Home } from '@components/Home';
+import { SearchView } from '@components/searchView';
+import { About } from '@components/about';
 
 
 export async function Router() {

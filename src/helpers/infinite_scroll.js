@@ -1,14 +1,13 @@
-import api from "./wp_api.js";
-import { SearchCard } from '../components/searchCard.js';
-import { PostCard } from '../components/postCard.js';
-import { GetData } from './get_data.js'
+import api from "@helpers/wp_api";
+import { SearchCard } from '@components/searchCard';
+import { PostCard } from '@components/postCard';
+import { GetData } from '@helpers/get_data'
 
 export async function InfiniteScroll() {
    let 
       query = sessionStorage.getItem('wp-search'),
       apiURL,
       Component;
-      console.log(query)
 
    window.addEventListener('scroll', async (event) =>{
       let { scrollTop, clientHeight, scrollHeight } = document.documentElement;

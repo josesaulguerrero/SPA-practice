@@ -1,8 +1,8 @@
-import { Loader } from './components/loader.js';
-import { Header } from './components/header.js';
-import { Main } from './components/main.js';
-import { Router } from './routes/router.js';
-import { InfiniteScroll } from './helpers/infinite_scroll.js'
+import { Loader } from '@components/loader';
+import { Header } from '@components/header';
+import { Main } from '@components/main';
+import { Router } from '@routes/router';
+import { InfiniteScroll } from '@helpers/infinite_scroll'
 
 
 export async function App() {

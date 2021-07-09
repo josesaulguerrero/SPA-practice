@@ -1,4 +1,4 @@
-import api from '../helpers/wp_api.js'
+import api from '../helpers/wp_api'
 
 export function Title() {
    const $h1 = document.createElement('h1');

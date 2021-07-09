@@ -1,4 +1,4 @@
-import { Error } from "../components/error.js";
+import { Error } from "@components/error";
 
 export async function GetData(url) {
    // let { url } = props;

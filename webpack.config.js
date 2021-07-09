@@ -6,16 +6,19 @@ module.exports = {
    entry: './src/index.js',
    output: {
       path: path.resolve(__dirname, 'dist'),
-      filename: 'App[contenthash].js',
+      filename: 'Main[contenthash].js',
       clean: true,
    },
    resolve: {
       extensions: ['.js'],
       alias: {
          '@styles': path.resolve(__dirname, 'src/assets/styles/'),
-         '@images': path.resolve(__dirname, 'src/assets/images'),
+         '@images': path.resolve(__dirname, 'src/assets/images/'),
+         '@components': path.resolve(__dirname, 'src/components/'),
          '@helpers': path.resolve(__dirname, 'src/helpers/'),
          '@routes': path.resolve(__dirname, 'src/routes/'),
+         '@templates': path.resolve(__dirname, 'src/templates/'),
+         '@src': path.resolve(__dirname, 'src/'),
       },
    },
    module: {
@@ -33,6 +36,13 @@ module.exports = {
                miniCSS.loader,
                'css-loader', 
             ]
+         },
+         {
+            test: /\.(png|svg)$/,
+            type: 'asset/resource',
+            generator: {
+               filename: './assets/[name][contenthash][ext]'
+            }
          },
       ]
    },

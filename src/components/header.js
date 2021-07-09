@@ -1,6 +1,6 @@
-import { Menu } from "./menu.js";
-import { SearchBar } from "./searchBar.js";
-import { Title } from "./title.js";
+import { Menu } from "@components/menu";
+import { SearchBar } from "@components/searchBar";
+import { Title } from "@components/title";
 
 export function Header() {
    const $header = document.createElement("header");

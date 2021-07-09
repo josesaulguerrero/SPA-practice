@@ -1,5 +1,3 @@
-import { BackButton } from './backButton.js';
-
 export function PostDetailed(data) {
    const date = new Date(data.date).toLocaleDateString();
 

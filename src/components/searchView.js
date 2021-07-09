@@ -1,8 +1,7 @@
-import { GetData } from "../helpers/get_data.js";
-import api from "../helpers/wp_api.js";
-import { ErrorSearch } from "../templates/errorSearch.js";
-import { PostCard } from "./postCard.js";
-import { SearchCard } from "./searchCard.js";
+import { GetData } from "@helpers/get_data";
+import api from "@helpers/wp_api";
+import { ErrorSearch } from "@templates/errorSearch";
+import { SearchCard } from "@components/searchCard";
 
 export async function SearchView() {
    const $main = document.getElementById("main");

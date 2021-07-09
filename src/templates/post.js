@@ -1,9 +1,8 @@
-import api from '../helpers/wp_api.js';
-import { PostDetailed } from '../components/postDetailed.js';
-import { BackButton } from '../components/backButton.js';
-import { GetData } from '../helpers/get_data.js';
-import { ErrorPost } from './errorPost.js';
-// import { PostError } from './postError.js';
+import api from '@helpers/wp_api';
+import { PostDetailed } from '@components/postDetailed';
+import { BackButton } from '@components/backButton';
+import { GetData } from '@helpers/get_data';
+import { ErrorPost } from '@templates/errorPost';
 
 export async function Post() {
    const $main = document.getElementById("main");
