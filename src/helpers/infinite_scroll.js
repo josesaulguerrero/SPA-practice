@@ -14,7 +14,7 @@ export async function InfiniteScroll() {
       let { hash } = location;
 
       // console.log(scrollTop, clientHeight, scrollHeight, hash)
-      if(scrollTop + clientHeight >= scrollHeight) {
+      if(scrollTop + clientHeight >= scrollHeight - 50) {
          api.page += 1;
 
          if(!hash || hash === "#/") {
