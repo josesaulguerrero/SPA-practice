@@ -3,6 +3,7 @@ export function BackButton() {
    $button.innerText = "Go back";
    $button.classList.add('back-button');
    $button.id = 'back-button';
+   // $button.href = "#/"
    $button.onclick = () => {
       history.scrollRestoration = 'auto';
       window.history.back();

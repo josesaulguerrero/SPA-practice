@@ -1,18 +1,34 @@
 import { Post } from '../templates/post.js';
 import { ErrorPost } from '../templates/errorPost.js';
 import { Home } from '../components/Home.js';
+import { SearchView } from '../components/searchView.js';
+import { About } from '../components/about.js';
 
 
 export async function Router() {
-   let { hash } = location;
+   let { hash = "#/home" } = location;
    const $main = document.getElementById("main");
    $main.innerHTML = null;
+   document.querySelector('.search-input').value = sessionStorage.getItem('wp-search');
 
-   if(!hash || hash === "#/") await Home();
-   else if(hash.includes("#/search")) $main.innerHTML = "<h2>search</h2>"
-   else if(hash === "#/about") $main.innerHTML = "<h2>about</h2>"
+   if(!hash || hash === "#/"){ 
+      const $home_link = document.getElementById('home');
+      $home_link.classList.add('home-down');
+      await Home();
+   }
+   else if(hash.includes("#/search")){
+      const $search_link = document.getElementById('search');
+      $search_link.classList.add('search-down');
+      await SearchView(); 
+   }
+   else if(hash === "#/about") {
+      const $about_link = document.getElementById('about');
+      $about_link.classList.add('about-down');
+      $main.innerHTML = About();
+   }
    else if((/#\/\b\w{1,}\b\-?.*/).test(location.hash)) await Post()
    else $main.innerHTML = ErrorPost();
+
    
    document.getElementById("loader").style.visibility = "hidden";
 }

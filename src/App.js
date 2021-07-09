@@ -2,6 +2,7 @@ import { Loader } from './components/loader.js';
 import { Header } from './components/header.js';
 import { Main } from './components/main.js';
 import { Router } from './routes/router.js';
+import { InfiniteScroll } from './helpers/infinite_scroll.js'
 
 
 export async function App() {
@@ -12,4 +13,5 @@ export async function App() {
    $root.appendChild(Main());
    $root.appendChild(Loader());
    Router();
+   InfiniteScroll()
 }

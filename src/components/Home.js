@@ -5,8 +5,12 @@ import { PostCard } from "./postCard.js";
 
 export async function Home() {
    const $main = document.getElementById("main");
+
    const data = await GetData(api.POSTS);
-   $main.innerHTML = data.reduce((acumulator, item) => {
+   let view = data.reduce((acumulator, item) => {
       return acumulator += PostCard(item);
    }, "");
+
+   $main.innerHTML = view;
+   sessionStorage.setItem('data-home', view);
 }

@@ -9,7 +9,7 @@ export async function GetData(url) {
       
       return response;
    } catch(error) {
-      console.log(error)
+      console.log('hola')
       document.getElementById("main").appendChild(Error());
    }
 }
